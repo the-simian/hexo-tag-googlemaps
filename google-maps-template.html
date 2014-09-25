@@ -20,12 +20,12 @@
     console.log('making map', '<%- id %>');
 
     var mapOptions = {
-      zoom: 8,
+      zoom: <%- zoom %>,
       center: new window.google.maps.LatLng( <%- center.latitude %> , <%- center.longitude %> ),
     };
 
     var target = document.getElementById('<%- id %>');
-
+    
     var map = new window.google.maps.Map(target, mapOptions);
   }
 
@@ -46,9 +46,7 @@
   }
 
   if (!window.hexoGmaps.googleScriptLoaded) {
-    console.log('load it!');
     loadScript();
-  } else {
-    console.log('skiploading');
-  }
+  } 
+  
 </script>

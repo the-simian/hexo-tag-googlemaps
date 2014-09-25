@@ -14,6 +14,7 @@ function googleMaps(args, content) {
     id: 'googleMap' + ((Math.random() * 9999) | 0),
     width: '100%',
     height: '250px',
+    zoom: 8,
     center: {
       latitude: args[0],
       longitude: args[1]
