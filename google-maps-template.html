@@ -5,12 +5,7 @@
             padding: 0px
             ">
 </div>
-<style>
-  .gmnoprint img {
-    max-width: none;
-  }
-</style>
-
+<style>.gmnoprint img {max-width: none;}</style>
 <script defer="defer">
   window.hexoGmaps = window.hexoGmaps || { maps: {}};
 
@@ -25,7 +20,6 @@
     };
 
     var target = document.getElementById('<%- id %>');
-    
     var map = new window.google.maps.Map(target, mapOptions);
   }
 

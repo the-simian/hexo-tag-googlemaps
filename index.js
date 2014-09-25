@@ -24,8 +24,9 @@ function googleMaps(args, content) {
   var compiledMap = _.template(template, model);
 
 
-  console.log(compiledMap);
-  console.log('\n\n\n', args, content);
+//  console.log(compiledMap);
+//  console.log('\n\n\n', args, content);
+  
   return compiledMap;
 
 }
