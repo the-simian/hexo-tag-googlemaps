@@ -10,7 +10,7 @@
   "dependencies": {
     "lodash": "^2.4.1"
   },
-  "description": "A simple hexo tag for google maps",
+  "description": "A hexo tag for inserting google maps",
   "maintainers": [
     {
       "name": "the_simian",
