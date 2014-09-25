@@ -3,10 +3,23 @@ hexo-tag-googlemaps
 
 ## Intro ##
 
-Not: this is in alpha
+Note: This tag plugin is very early in its development, and basically only takes a latitud and longitude as arguments.
 
-This is still in alpha, and only take a lat and long
-
-use it like this you don't need to close the tag
 
 {% google-maps latitude longitude  %}
+
+
+You can put as many as you'd like on a page.
+
+## Example
+
+
+{% google-maps 35.21792 -97.50329  %}
+
+{% google-maps 71.29056 -156.78861  %}
+
+will produce two maps for Oklahoma City and Barrow, Alaska
+
+
+
+

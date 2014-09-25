@@ -31,4 +31,4 @@ function googleMaps(args, content) {
 
 }
 
-tags.register('google-maps', googleMaps, true);
+tags.register('google-maps', googleMaps);
