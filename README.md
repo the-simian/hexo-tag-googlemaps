@@ -20,6 +20,8 @@ You can put as many as you'd like on a page.
 
 will produce two maps for Oklahoma City and Barrow, Alaska
 
+![Example of hexo tag for googlemaps](http://i.imgur.com/GkUFew6.png)
+
 
 
 
