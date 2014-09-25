@@ -8,8 +8,6 @@
     "url": "http://jesseharlin.net/"
   },
   "dependencies": {
-    "dot": "^1.0.2",
-    "googlemaps": "^0.1.19",
     "lodash": "^2.4.1"
   },
   "description": "A simple hexo tag for google maps",

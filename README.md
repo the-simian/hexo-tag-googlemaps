@@ -3,5 +3,5 @@ hexo-tag-googlemaps
 
 ## Intro ##
 
-hexo-tag-googlemaps 
+This is still in alpha, and only take a lat and long
 

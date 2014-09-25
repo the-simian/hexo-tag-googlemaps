@@ -1,21 +1,12 @@
 //var dots = require("dot").process({path: "views"});
 var fs = require('fs');
 var path = require('path');
-var _ = require('lodash')
+var _ = require('lodash');
 
 var filePath = path.join(__dirname, 'google-maps-template.html');
-
 var tags = hexo.extend.tag;
 
-
-var gm = require('googlemaps');
-var util = require('util');
-
-
-
 function googleMaps(args, content) {
-
-  
 
   var template = fs.readFileSync(filePath).toString().trim();
 
@@ -37,6 +28,5 @@ function googleMaps(args, content) {
   return compiledMap;
 
 }
-
 
 tags.register('google-maps', googleMaps, true);
