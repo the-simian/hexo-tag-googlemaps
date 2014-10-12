@@ -15,6 +15,7 @@
     console.log('making map', '<%- id %>');
 
     var mapOptions = {
+      scrollwheel: <%- scrollwheel %>,
       zoom: <%- zoom %>,
       center: new window.google.maps.LatLng( <%- center.latitude %> , <%- center.longitude %> ),
     };
@@ -27,7 +28,7 @@
     console.log('making every map')
     for (var map in window.hexoGmaps.maps) {
        console.log('map #', map);
-       window.hexoGmaps.maps[map]();               
+       window.hexoGmaps.maps[map]();
     }
   }
 
@@ -41,6 +42,6 @@
 
   if (!window.hexoGmaps.googleScriptLoaded) {
     loadScript();
-  } 
-  
+  }
+
 </script>
