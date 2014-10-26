@@ -1,29 +1,21 @@
-<div id="<%- id %>" style="
-            height: <%- height %>;
+<div id="<%- id %>" style="height: <%- height %>;
             width: <%- width %>;
             margin: 0px;
             padding: 0px
             ">
 </div>
-<style>.gmnoprint img {max-width: none;}</style>
+<style>.gmnoprint img {max-width: none !important;}</style>
 <script defer="defer">
   window.hexoGmaps = window.hexoGmaps || { maps: {}};
-
-
   window.hexoGmaps.maps['init<%- id %>'] = function init() {
-
-    console.log('making map', '<%- id %>');
-
     var mapOptions = {
-      scrollwheel: <%- scrollwheel %>,
-      zoom: <%- zoom %>,
-      center: new window.google.maps.LatLng( <%- center.latitude %> , <%- center.longitude %> ),
-    };
-
-    var target = document.getElementById('<%- id %>');
-    var map = new window.google.maps.Map(target, mapOptions);
+       "scrollwheel": <%- scrollwheel %>,
+       "zoom": <%- zoom %>,
+       "center": new window.google.maps.LatLng( <%- center.latitude %> , <%- center.longitude %> ),
+     },
+     target = document.getElementById('<%- id %>'),
+     map = new window.google.maps.Map(target, mapOptions);
   }
-
   function makeMaps() {
     console.log('making every map')
     for (var map in window.hexoGmaps.maps) {
@@ -31,7 +23,6 @@
        window.hexoGmaps.maps[map]();
     }
   }
-
   function loadScript() {
     window.hexoGmaps.googleScriptLoaded = true;
     var script = document.createElement('script');
@@ -39,9 +30,7 @@
     script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&callback=makeMaps';
     document.body.appendChild(script);
   }
-
   if (!window.hexoGmaps.googleScriptLoaded) {
     loadScript();
   }
-
 </script>
