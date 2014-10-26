@@ -15,7 +15,7 @@ function googleMaps(args, content) {
     width: '100%',
     height: '250px',
     zoom: 8,
-    scrollwheel: false,
+    scrollwheel: false,  
     center: {
       latitude: args[0],
       longitude: args[1]
