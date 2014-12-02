@@ -7,6 +7,10 @@
     "email": "harlin.jesse@gmail.com",
     "url": "http://jesseharlin.net/"
   },
+  "repository": {
+	"type": "git",
+	"url": "git@github.com:the-simian/hexo-tag-googlemaps.git"
+  }
   "dependencies": {
     "lodash": "^2.4.1"
   },
