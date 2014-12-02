@@ -3,7 +3,7 @@ hexo-tag-googlemaps
 
 ## Intro ##
 
-Note: This tag plugin is very early in its development, and basically only takes a latitud and longitude as arguments.
+Note: This tag plugin is very early in its development, and basically only takes a latitude and longitude as arguments.
 
 
 {% google-maps latitude longitude  %}
