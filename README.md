@@ -7,7 +7,7 @@ Compatible with Hexo Version 3
 
 The google maps tag plugin for hexo is designed to be a way to add simple maps to your hexo site. The main tag, called `googlemaps` requires an endtag called `endgooglemaps`.
 
-The main tag can have up to 5 arguments, with the first 2 being required
+The main tag can have up to 5 arguments, with none being required. If a map is created without a center point, it will default to the first marker's center point. If a zoom level is not specified, it will default to 8.
 
 ```
 {% googlemaps latitude longitude zoom width height %}
@@ -15,10 +15,10 @@ The main tag can have up to 5 arguments, with the first 2 being required
 
 The content area is intended to be a list of markers. Each marker is to be on a separate line, in the order of its z index. Top of the list is z index of 0 and so on)
 
-Each marker can take 4 arguments, and the first three are required. tHe properties are separated by `,`
+Each marker can take 4 arguments, and the first three are required. The properties are separated by `,`
 
 ```
-Title Text, latitude, longitude, icon
+Title, Latitude, Longitude, Icon
 
 ```
 
@@ -49,7 +49,7 @@ The following code will produce the following map:
 
 ![http://i.imgur.com/PtcHFpQ.png](http://i.imgur.com/PtcHFpQ.png)
 
-
+If you do not specify a
 
 You may also put as many instances of this plugin on your page as you'd like.
 
