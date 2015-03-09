@@ -1,7 +1,9 @@
 #hexo-tag-googlemaps
 
 Version: 1.0.0
+
 Compatible with Hexo Version 3
+
 
 ## About
 
