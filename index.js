@@ -9,27 +9,47 @@ var tags = hexo.extend.tag;
 function googleMaps(args, content) {
 
   var template = fs.readFileSync(filePath).toString().trim();
+  var markers = [];
+
+  function toMarker(d) {
+    var list = d.split(',');
+    return {
+      name: list[0] || '',
+      latitude: parseFloat(list[1]),
+      longitude: parseFloat(list[2]),
+      icon: (list[3] || '').trim()
+    };
+  }
+
+  if (content.length) {
+    markers = _.map(content.split('\n'), toMarker);
+  }
 
   var model = {
     id: 'googleMap' + ((Math.random() * 9999) | 0),
-    width: '100%',
-    height: '250px',
-    zoom: 8,
-    scrollwheel: false,  
+    width: args[3] || '100%',
+    height: args[4] || '250px',
+    zoom: args[2] || 8,
+    scrollwheel: false,
     center: {
-      latitude: args[0],
-      longitude: args[1]
-    }
+      latitude: args[0] || markers[0].latitude,
+      longitude: args[1] || markers[0].longitude,
+    },
+    markers: markers
   };
+  
 
   var compiledMap = _.template(template, model);
 
-
-//  console.log(compiledMap);
-//  console.log('\n\n\n', args, content);
+  //  console.log(compiledMap);
+  // console.log('\n\n\n', args, content);
 
   return compiledMap;
 
 }
 
-tags.register('google-maps', googleMaps);
+
+tags.register('googlemaps', googleMaps, {
+  async: true,
+  ends: true
+});

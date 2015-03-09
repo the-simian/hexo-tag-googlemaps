@@ -1,4 +1,5 @@
-<div id="<%- id %>" style="height: <%- height %>;
+<div id="<%- id %>" style="
+            height: <%- height %>;
             width: <%- width %>;
             margin: 0px;
             padding: 0px
@@ -9,15 +10,28 @@
   window.hexoGmaps = window.hexoGmaps || { maps: {}};
   window.hexoGmaps.maps['init<%- id %>'] = function init() {
     var mapOptions = {
-       "scrollwheel": <%- scrollwheel %>,
-       "zoom": <%- zoom %>,
-       "center": new window.google.maps.LatLng( <%- center.latitude %> , <%- center.longitude %> ),
+       'scrollwheel': <%- scrollwheel %>,
+       'zoom': <%- zoom %>,
+       'center': new window.google.maps.LatLng( <%- center.latitude %> , <%- center.longitude %> ),
      },
      target = document.getElementById('<%- id %>'),
      map = new window.google.maps.Map(target, mapOptions);
+      
+   <% _.each(markers, function(marker, i){%>  
+     
+     var opts<%- i %> = {
+        'position': new window.google.maps.LatLng( <%- marker.latitude %> , <%- marker.longitude %> ),
+        'map': map,
+        'title': '<%- marker.name %>',
+        'zIndex' : <%- i %>,
+        'icon': '<%- marker.icon %>'
+      };
+     
+      var marker<%- i %> = new window.google.maps.Marker(opts<%- i %>);
+   <%}) %>
+
   }
   function makeMaps() {
-    console.log('making every map')
     for (var map in window.hexoGmaps.maps) {
        console.log('map #', map);
        window.hexoGmaps.maps[map]();
