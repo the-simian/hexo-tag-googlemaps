@@ -51,8 +51,6 @@ The following code will produce the following map:
 
 ![http://i.imgur.com/PtcHFpQ.png](http://i.imgur.com/PtcHFpQ.png)
 
-If you do not specify a
-
 You may also put as many instances of this plugin on your page as you'd like.
 
 
