@@ -1,6 +1,6 @@
 #hexo-tag-googlemaps
 
-Version: 1.0.0
+Version: 1.1.0
 
 Compatible with Hexo Version 3
 
@@ -30,7 +30,7 @@ Title, Latitude, Longitude, Icon
 * Icon (optional): a url of a marker icon. This can be relative to a icon in the hexo install or locaded elsewhere on a cdn.
 This replaces the usual icon ![http://i.imgur.com/ljtDDxV.png](http://i.imgur.com/ljtDDxV.png)
 
-If you're looking for a lot of icons, try this place: [https://code.google.com/p/google-maps-icons](https://code.google.com/p/google-maps-icons)
+If you're looking for a lot of icons, try this place: [github.com/giangoulas/google-maps-icons](https://github.com/giangoulas/google-maps-icons/tree/d0da0fb6974bec62b7f8d0e0f96ca90dd5371767/wiki)
 
 ##Simple Example
 
