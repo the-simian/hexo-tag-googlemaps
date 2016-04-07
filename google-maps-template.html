@@ -26,8 +26,16 @@
         'zIndex' : <%- i %>,
         'icon': '<%- marker.icon %>'
       };
-     
-      var marker<%- i %> = new window.google.maps.Marker(opts<%- i %>);
+
+     var infowindow<%- i %> = new window.google.maps.InfoWindow({
+       content: '<%- marker.name %>'
+     });
+
+     var marker<%- i %> = new window.google.maps.Marker(opts<%- i %>);
+
+     marker<%- i %>.addListener('click', function(){
+       infowindow<%- i %>.open(map, marker<%- i %>)
+     })
    <%}) %>
 
   }

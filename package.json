@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-googlemaps",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index",
   "author": {
     "name": "Jesse Harlin",
@@ -8,8 +8,8 @@
     "url": "http://jesseharlin.net/"
   },
   "repository": {
-	"type": "git",
-	"url": "git@github.com:the-simian/hexo-tag-googlemaps.git"
+    "type": "git",
+    "url": "git@github.com:the-simian/hexo-tag-googlemaps.git"
   },
   "dependencies": {
     "lodash": "^2.4.1"
