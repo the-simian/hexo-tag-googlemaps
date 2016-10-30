@@ -7,7 +7,13 @@ Compatible with Hexo Version 3
 
 ## About
 
-The google maps tag plugin for hexo is designed to be a way to add simple maps to your hexo site. The main tag, called `googlemaps` requires an endtag called `endgooglemaps`.
+The google maps tag plugin for hexo is designed to be a way to add simple maps to your hexo site. First you need to add your Google Maps JavaScript API Key (get one [here](https://developers.google.com/maps/documentation/javascript/get-api-key)) to the main config (`_config.yml`):
+
+```
+google_maps_api_key: ThisIsMyOwnGoogleMapsAPIKey
+```
+
+The main tag, called `googlemaps` requires an endtag called `endgooglemaps`.
 
 The main tag can have up to 5 arguments, with none being required. If a map is created without a center point, it will default to the first marker's center point. If a zoom level is not specified, it will default to 8.
 
