@@ -26,8 +26,16 @@
         'zIndex' : <%- i %>,
         'icon': '<%- marker.icon %>'
       };
-     
-      var marker<%- i %> = new window.google.maps.Marker(opts<%- i %>);
+
+     var infowindow<%- i %> = new window.google.maps.InfoWindow({
+       content: '<%- marker.name %>'
+     });
+
+     var marker<%- i %> = new window.google.maps.Marker(opts<%- i %>);
+
+     marker<%- i %>.addListener('click', function(){
+       infowindow<%- i %>.open(map, marker<%- i %>)
+     })
    <%}) %>
 
   }
@@ -41,7 +49,7 @@
     window.hexoGmaps.googleScriptLoaded = true;
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = '//maps.googleapis.com/maps/api/js?v=3.exp&callback=makeMaps&key=<%- apikey %>';
+        script.src = '//maps.googleapis.com/maps/api/js?v=3.exp&callback=makeMaps&key=<%- apikey %>';
     document.body.appendChild(script);
   }
   if (!window.hexoGmaps.googleScriptLoaded) {
