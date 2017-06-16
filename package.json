@@ -1,12 +1,19 @@
 {
   "name": "hexo-tag-googlemaps",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "index",
   "author": {
     "name": "Jesse Harlin",
     "email": "harlin.jesse@gmail.com",
     "url": "http://jesseharlin.net/"
   },
+  "contributors":[
+    {
+    "name": "Fabian Meyer",
+    "email": "fm-github@noinfo.de",
+    "url": "https://noinfo.de/"
+  }
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:the-simian/hexo-tag-googlemaps.git"
