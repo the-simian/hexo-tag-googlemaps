@@ -40,7 +40,7 @@ function googleMaps(args, content) {
   };
 
 
-  var templateFunction = _.template(template)
+  var templateFunction = _.template(template);
   var compiledMap = templateFunction(model);
 
   //  console.log(compiledMap);
