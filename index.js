@@ -38,9 +38,10 @@ function googleMaps(args, content) {
     markers: markers,
     apikey: APIKey
   };
-  
 
-  var compiledMap = _.template(template, model);
+
+  var templateFunction = _.template(template);
+  var compiledMap = templateFunction(model);
 
   //  console.log(compiledMap);
   // console.log('\n\n\n', args, content);
